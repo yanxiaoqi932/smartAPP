@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="20dp">
+
+
+    <Button
+        android:id="@+id/buttonCNKI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cnki"
+        android:layout_marginBottom="45dp"
+        android:layout_above="@+id/buttonCSU"
+        android:layout_alignLeft="@+id/buttonCSUWD"
+        android:layout_alignStart="@+id/buttonCSUWD" />
+
+    <Button
+        android:id="@+id/buttonCSU"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/csu"
+        android:layout_alignTop="@+id/buttonCSUWD"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="23dp"
+        android:layout_marginEnd="23dp" />
+
+    <Button
+        android:id="@+id/buttonCSUWD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/csuwd"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="78dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/buttonWANFANG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/wanfang"
+        android:layout_alignTop="@+id/buttonCNKI"
+        android:layout_alignLeft="@+id/buttonCSU"
+        android:layout_alignStart="@+id/buttonCSU" />
+
+</RelativeLayout>

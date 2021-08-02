@@ -1,0 +1,14 @@
+{
+	"client":{
+		"appType":"1",
+		"cp_id":"2850086000466211334",
+		"product_id":"736430079244818041",
+		"client_id":"565224525822702208",
+		"client_secret":"7865C1C8F6988F7299E37CDE7D16D3FD7AC989D5C343E708B5AE584105A6E9FC",
+		"project_id":"736430079244818041",
+		"app_id":"103861763",
+		"api_key":"CgB6e3x9INTUProBjCO3GjuU/52lsTtNwux52NcnybujGWlkuXGfvQF8IZJvmH8de6iPP3nHr8phkNJyHPcb5uhk",
+		"package_name":"com.example.xhello"
+	},
+	"configuration_version":"1.0"
+}

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.xhello">
+
+    <queries>
+        <intent>
+            <action android:name="com.huawei.hms.core.aidlservice" />
+        </intent>
+    </queries>
+
+    <uses-sdk tools:overrideLibrary="com.huawei.agconnect.core,com.huawei.hmf.tasks,com.huawei.hms.mlsdk,com.huawei.android.hms.base,
+        com.huawei.hms.mlsdk.common,com.huawei.hms.ml.common,com.huawei.hms.mlkit.imgseg,
+        com.huawei.hms.feature.dynamic,com.huawei.hms:ml-computer-vision:1.0.3.300,com.huawei.hms.mlsdk.vision.shell,
+        com.huawei.hms.mlkit.common.ha,com.huawei.hms.mlsdk.imgseg,com.huawei.hms.mlkit.ocr,com.huawei.hms.mlsdk.ocr,
+        com.huawei.hms.mlkit.net,com.huawei.hms.base,com.huawei.hms.mlsdk.base,com.huawei.hms.mlsdk.dynamic,
+        com.huawei.hms.base.availableupdate,com.huawei.hms.base.ui,com.huawei.hms.stats,com.huawei.hms.base.device,
+        com.huawei.hms.log,com.huawei.hms.ml.grs,com.huawei.hms.mlkit.agc,com.huawei.hms.ml.common.utils,com.huawei.hms.mlplugin.card.gcr,
+        com.huawei.hms.mlplugin.card.qa"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 连接网络权限，用于执行云端语音能力 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 获取手机录音机使用权限，听写、识别、语义理解需要用到此权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 读取网络信息状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 获取当前wifi状态 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 允许程序改变网络连接状态 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- 读取手机信息权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 读取联系人权限，上传联系人需要用到此权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- 外存储写入权限，构建语法需要用到此权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--相机权限-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!--读权限-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon1"
+        android:label="百事通"
+        android:roundIcon="@drawable/icon1"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+        android:usesCleartextTraffic="true"
+        android:name="com.example.xhello.JpushApplication"
+
+        >
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".GuideActivity"
+            android:label="@string/title_activity_guide" />
+        <activity
+            android:name=".ShowActivity"
+            android:label="@string/title_activity_show"
+            android:theme="@style/Theme.PageIndicatorDefaults" />
+        <activity
+            android:name=".NewsDetailActivity"
+            android:label="@string/title_activity_news_detail"/>
+        <activity
+            android:name=".SmartActivity"
+            android:label="SmartActivity"/>
+        <activity
+            android:name=".GovActivity"
+            android:label="GovActivity"/>
+        <activity
+            android:name=".XpicActivity"
+            android:label="XpicActivity" />
+        <activity
+            android:name=".StillCutPhotoActivity"
+            android:label="StillCutPhotoActivity" />
+        <activity
+            android:name=".GeneralCardRecognitionActivity"
+            android:label="GeneralCardRecognitionActivity" />
+    </application>
+    <service android:name="cn.jpush.android.service.PushService"
+        android:process=":multiprocess"
+        tools:node="replace" >
+    </service>
+
+</manifest>

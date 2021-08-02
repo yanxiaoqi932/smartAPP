@@ -1,0 +1,5 @@
+include ':app', ':Slidinglibrary', ':jiguang'
+include ':ViewPagerIndicatorlibrary'
+include ':library'
+include ':sample'
+include ':sample'

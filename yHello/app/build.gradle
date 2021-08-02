@@ -1,0 +1,82 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.huawei.agconnect'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        applicationId "com.example.xhello"
+        minSdkVersion 16
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true  // this line will solve this problem
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a','x86'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : applicationId,
+                JPUSH_APPKEY :"936efdffe3211efd5670fc52",
+                JPUSH_CHANNEL:"developer-default"
+        ]
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile project(':Slidinglibrary')
+    compile project(':ViewPagerIndicatorlibrary')
+    compile files('libs/android-support-v4.jar')
+    compile files('libs/xUtils-2.6.14.jar')
+    compile files('libs/gson-2.3.1.jar')
+    compile 'cn.jiguang.sdk:jpush:3.1.1'
+    // 此处以JPush 3.1.1 版本为例。
+    compile 'cn.jiguang.sdk:jcore:1.1.9'
+    // 此处以JCore 1.1.9 版本为例。
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    compile files('libs/Sunflower.jar')
+    compile files('libs/Msc.jar')
+
+    // Add dependencies.
+    // compile 'com.huawei.agconnect:agconnect-core:1.4.2.301'
+    // 引入基础SDK
+    compile 'com.huawei.hms:ml-computer-vision-segmentation:1.0.3.300'
+    // 引入人脸检测能力包
+    compile 'com.huawei.hms:ml-computer-vision-image-segmentation-body-model:1.0.3.300'
+    //compile 'com.huawei.hms:ml-computer-vision-image-segmentation-body-model:1.0.3.300'
+    // 引入银行卡识别plugin包
+//    compile 'com.huawei.hms:ml-computer-card-bcr-plugin:1.0.3.300'
+//    // 引入银行卡识别模型包
+//    compile 'com.huawei.hms:ml-computer-card-bcr-model:1.0.3.300'
+    //compile 'com.huawei.hms:ml-computer-card-bcr:2.0.3.301'
+    //compile 'com.huawei.hms:ml-computer-card-bcr-plugin:1.0.3.300'
+//    compile 'com.huawei.hms:ml-computer-vision-ocr:2.0.1.300'
+//    compile 'com.huawei.hms:ml-computer-vision-ocr-cn-model:2.0.1.300'
+    // 引入基础SDK
+    compile 'com.huawei.hms:ml-computer-vision-ocr:1.0.3.300'
+    // 引入拉丁语文字识别模型包
+    compile 'com.huawei.hms:ml-computer-vision-ocr-latin-model:1.0.3.300'
+    // 引入银行卡识别plugin包
+    compile 'com.huawei.hms:ml-computer-card-gcr-plugin:1.0.3.300'
+}
+
+

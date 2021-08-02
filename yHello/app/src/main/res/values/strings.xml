@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">xHello</string>
+    <string name="title_activity_guide">GuideActivity</string>
+    <string name="buttonstartGuide">开始体验</string>
+    <string name="title_activity_shou">ShouActivity</string>
+    <string name="title_activity_show">ShowActivity</string>
+    <string name="title_activity_news_detail">NewsDetailActivity</string>
+    <string name="mwc_title">ID Photo DIY</string>
+    <string name="mwc_subject">Make your own ID photo</string>
+    <string name="white_background">White Background</string>
+    <string name="blue_background">Blue Background</string>
+    <string name="mwc_detail">Choose the right background to make an ID photo</string>
+    <string name="please_select_picture">Please select a background to process~</string>
+    <string name="camera_permission_rationale">This app requires camera and storage access in order to
+        demo the API.</string>
+    <string name="settings">Settings</string>
+    <string name="cancel">cancel</string>
+    <string name="select_picture">Select Picture</string>
+    <string name="cut">Cut</string>
+    <string name="replace_background">Background</string>
+    <string name="save">Save</string>
+    <string name="cut_success">Cut success</string>
+    <string name="no_pic_neededSave">Null Image needed to save</string>
+    <string name="save_success">Save success</string>
+    <string name="bcr">BCR</string>
+    <string name="bcr_upload_self_photo">"Please upload the bank card"</string>
+    <string name="bcr_upload">Upload card</string>
+    <string name="icr_hint_ensure_user_info_security">Your personal information will be protected in accordance with the law.</string>
+    <string name="gcr_upload">"上传卡证"</string>
+    <string name="hk_pass">港澳台通行证</string>
+    <string name="hk_id_card">"香港身份证"</string>
+    <string name="home_card">港澳台居民来往大陆通行证</string>
+    <string name="recognition_results">"检测结果"</string>
+    <string name="take_photo">拍照</string>
+    <string name="select_from_album">从相册选择图片</string>
+    <string name="video_frame">Video stream</string>
+    <string name="vedio_tip">Recognizing, please align the edges.</string>
+    <string name="capture_tip">Taking a picture, please align the edge.</string>
+    <string name="ucr_s">General Card Recognition</string>
+    <string name="back">back</string>
+    <string name="gcr_upload_self_photo">Upload photos of your card</string>
+</resources>
